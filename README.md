@@ -38,3 +38,14 @@ From a terminal instead, inside one of the two folders:
 ```
 
 Requirements: Android Studio with its bundled JDK (or any JDK 17+), and the Android SDK with platform 36.
+
+## If the first Gradle sync fails
+
+- **"Could not install Gradle distribution … Connection refused" from services.gradle.org:** some networks
+  block gradle.org. The wrapper therefore downloads Gradle from Gradle's own GitHub mirror
+  (`gradle/wrapper/gradle-wrapper.properties`, `distributionUrl`). The `distributionSha256Sum` line
+  checks that it is the official file. Don't edit these lines by hand; one wrong character gives a 404.
+- **"Connect timed out" (often on IPv6-only Wi-Fi):** in Android Studio, open **Help > Edit Custom VM
+  Options…**, add the line `-Djava.net.preferIPv6Addresses=true`, restart Android Studio and sync
+  again. Or switch to another network, such as a phone hotspot.
+- **A library download fails** (`dl.google.com`, `repo1.maven.org`): switch network and click **Try Again**.
