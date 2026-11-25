@@ -1,0 +1,11 @@
+# Build output and IDE files, for both projects in this repo.
+build/
+.gradle/
+.kotlin/
+.idea/
+*.iml
+local.properties
+.DS_Store
+captures/
+.externalNativeBuild/
+.cxx/
