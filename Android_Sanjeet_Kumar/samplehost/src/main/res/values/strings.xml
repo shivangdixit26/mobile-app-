@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Risk Checker</string>
+
+    <string name="tab_scan">Scan device</string>
+    <string name="tab_apps">Apps by permission</string>
+
+    <!-- Scan tab -->
+    <string name="scan_device">Scan device</string>
+    <string name="scanning">Scanning…</string>
+    <string name="scan_hint">Tap Scan device to check this phone for security risks.</string>
+    <string name="score_label">Security score</string>
+    <string name="score_out_of">/ 100</string>
+    <string name="scanned_at">Scanned at %1$s</string>
+    <string name="scanned_at_startup">Automatic scan when the app started, %1$s</string>
+    <string name="findings_count">Findings: %1$d</string>
+    <string name="no_findings">No risks found. This phone looks fine.</string>
+    <string name="show_json">Show JSON</string>
+    <string name="hide_json">Hide JSON</string>
+
+    <!-- Apps tab -->
+    <string name="search_label">Permission names, separated by commas</string>
+    <string name="search_placeholder">Camera, SMS, Camra</string>
+    <string name="search_supported">Known names: %1$s. A full name such as android.permission.CAMERA also works.</string>
+    <string name="search">Search</string>
+    <string name="searching">Looking through the installed apps…</string>
+    <string name="search_empty">Type one or more names first, for example Camera or SMS.</string>
+    <string name="not_recognised">Not recognised: %1$s</string>
+    <string name="apps_found">Apps found: %1$d. Tap one to open its App info.</string>
+    <string name="no_apps_found">No matching apps found.</string>
+    <string name="matched">Matched: %1$s</string>
+    <string name="system_tag">System</string>
+    <string name="permission_granted">%1$s: granted</string>
+    <string name="permission_requested">%1$s: requested only</string>
+    <string name="open_app_info">Open App info</string>
+    <string name="open_app_info_failed">Could not open App info for this app.</string>
+</resources>

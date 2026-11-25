@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Package visibility (Android 11+): by default PackageManager hides most other apps.
+        Instead of the restricted "see all apps" permission, the library asks to see only:
+          1. apps with a launcher icon, i.e. the apps a user installs and opens;
+          2. apps that offer an accessibility service (for the ACCESSIBILITY_APPS check).
+        Android merges this file into the host app's manifest, so the host adds nothing (R4).
+    -->
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent>
+        <intent>
+            <action android:name="android.accessibilityservice.AccessibilityService" />
+        </intent>
+    </queries>
+
+    <application>
+        <!--
+            Bonus: Android creates this provider when the host app starts, which starts one
+            scan without the host calling any code. Not exported: other apps cannot reach it.
+            A host can turn it off with tools:node="remove" on this provider.
+        -->
+        <provider
+            android:name="com.bugsmirror.riskchecker.internal.AutoScanProvider"
+            android:authorities="${applicationId}.riskchecker-autoscan"
+            android:exported="false" />
+    </application>
+
+</manifest>
